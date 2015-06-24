@@ -260,8 +260,8 @@
           console.log(responseData.length);
           $("#tulos_count").html(responseData.length);
           $.each(responseData, function(key, value) {
-             addMarker(value.nimi, value.lisenssi_ac_kaikki, value.lat, value.lng, value.ytunnus);
-             $("#tuloslista").append('<li class="customer" id="' + value.ytunnus + '"><a href="#">' + value.nimi + '</a></li>');
+             addMarker(value.name, value.vatcode, value.lat, value.lng);
+             $("#tuloslista").append('<li class="customer" id="' + value.vatcode + '"><a href="#">' + value.name + '</a></li>');
              $("#tuloslista").scroll();
 
           });
